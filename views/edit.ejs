@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>메뉴 수정</title>
+</head>
+<body>
+    <h1>메뉴 수정</h1>
+    <form action="/edit/<%= menu.id %>" method="POST">
+        메뉴명: <input type="text" name="name" value="<%= menu.name %>" required><br><br>
+        가격: <input type="number" name="price" value="<%= menu.price %>" required><br><br>
+        설명: <textarea name="description"><%= menu.description %></textarea><br><br>
+        <button type="submit">수정 완료</button>
+        <a href="/">취소</a>
+    </form>
+</body>
+</html>
