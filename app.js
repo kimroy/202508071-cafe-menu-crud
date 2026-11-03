@@ -21,7 +21,6 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({ extended: false })); 
 
-// [READ] 메인 화면 - 메뉴 목록 보기
 app.get('/', (req, res) => {
     const sql = 'SELECT * FROM menu';
     db.query(sql, (err, results) => {
